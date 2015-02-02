@@ -14,3 +14,22 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define degreeTOradians(x) (M_PI * (x)/180)
+
+#define kDEVICEMAC @"DeviceMac"
+#define KDEVICELOCATION @"DeviceLocaition"
+#define kFORMALDEHYDE @"Formaldehyde"
+#define kTEMPERATURE @"Temperature"
+#define kHUMIDITY @"Humidity"
+#define kPM @"PM"
+#define kPM10 @"PM10"
+#define KVOC @"VOC"
+#define kDEVICETYPE @"DeviceType"
+
+#define kCURRENTDEVICEMAC @"CurrentDeviceMac"
+#define kCURRENTDEVICETYPE @"CurrentDeviceType"
+#define kCURRENTDEVICELocation @"CurrentDeviceLocation"
+
+#define kSERVERURLPARTONE @"XXXXXXXXXXXXX"
+#define KSERVERURLPARTTWO @"XXXXXXXXXXXXX"
