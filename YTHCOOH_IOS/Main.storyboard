@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="So5-hf-oyI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="So5-hf-oyI">
     <dependencies>
         <deployment version="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1592,14 +1592,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入WIFI账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EYn-ee-NjO">
-                                <rect key="frame" x="106" y="79" width="471" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="csF-Dx-PrL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入WIFI密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RD0-Eg-HbM">
                                 <rect key="frame" x="106" y="131" width="471" height="30"/>
                                 <constraints>
@@ -1621,6 +1613,14 @@
                                     <action selector="initDevice:" destination="Qc0-JL-9ia" eventType="touchUpInside" id="0ad-DQ-EmT"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入WIFI账号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EYn-ee-NjO">
+                                <rect key="frame" x="106" y="79" width="471" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="csF-Dx-PrL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1667,13 +1667,6 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-g7-qC0">
-                                <rect key="frame" x="16" y="72" width="568" height="44"/>
-                                <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="T7f-pq-3z5"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="09j-jJ-xct">
                                 <rect key="frame" x="16" y="124" width="568" height="44"/>
                                 <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
@@ -1732,6 +1725,13 @@
                                     <action selector="findPassword:" destination="WTb-nB-Iv3" eventType="touchUpInside" id="RP9-UT-jYK"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="t4E-g7-qC0">
+                                <rect key="frame" x="16" y="72" width="568" height="44"/>
+                                <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="T7f-pq-3z5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -2283,7 +2283,56 @@
                     <view key="view" contentMode="scaleToFill" id="DMy-u2-XFl">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="Reg-37-Sqo">
+                                <rect key="frame" x="16" y="94" width="568" height="44"/>
+                                <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="65D-1M-5YO">
+                                <rect key="frame" x="16" y="146" width="568" height="44"/>
+                                <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="原始位置" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gRa-YZ-0Z5">
+                                <rect key="frame" x="106" y="101" width="471" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新位置" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbQ-aV-LXR">
+                                <rect key="frame" x="106" y="153" width="471" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="原位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ah-g4-cul">
+                                <rect key="frame" x="33" y="105" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新位置" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNv-fs-WeK">
+                                <rect key="frame" x="33" y="157" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-cK-kBM">
+                                <rect key="frame" x="16" y="262" width="568" height="44"/>
+                                <state key="normal" title="确认" backgroundImage="LoginButton">
+                                    <color key="titleColor" red="0.90297093880000001" green="0.97997658050000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Reg-37-Sqo" firstAttribute="leading" secondItem="DMy-u2-XFl" secondAttribute="leadingMargin" id="75V-EL-dLX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gRa-YZ-0Z5" secondAttribute="trailing" constant="7" id="Av0-dR-cHa"/>
+                            <constraint firstItem="Zu2-cK-kBM" firstAttribute="trailing" secondItem="DMy-u2-XFl" secondAttribute="trailingMargin" id="HTo-nQ-gPG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jbQ-aV-LXR" secondAttribute="trailing" constant="7" id="Liz-gE-Fte"/>
+                            <constraint firstItem="65D-1M-5YO" firstAttribute="trailing" secondItem="DMy-u2-XFl" secondAttribute="trailingMargin" id="egW-f2-9lU"/>
+                            <constraint firstItem="65D-1M-5YO" firstAttribute="leading" secondItem="DMy-u2-XFl" secondAttribute="leadingMargin" id="gmC-9h-HUB"/>
+                            <constraint firstItem="Zu2-cK-kBM" firstAttribute="leading" secondItem="DMy-u2-XFl" secondAttribute="leadingMargin" id="p1C-ec-baN"/>
+                            <constraint firstItem="Reg-37-Sqo" firstAttribute="trailing" secondItem="DMy-u2-XFl" secondAttribute="trailingMargin" id="xl4-L4-Jaq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="修改设备位置" id="4AU-5k-Vuy"/>
                 </viewController>
@@ -2302,13 +2351,80 @@
                     <view key="view" contentMode="scaleToFill" id="MeM-OR-7u1">
                         <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="7Tx-RZ-uuk">
+                                <rect key="frame" x="16" y="93" width="568" height="44"/>
+                                <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="bnc-Aa-dKi">
+                                <rect key="frame" x="16" y="145" width="568" height="44"/>
+                                <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入原始密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bON-nY-0gr">
+                                <rect key="frame" x="119" y="100" width="458" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入新的密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hN1-xG-ObI">
+                                <rect key="frame" x="119" y="152" width="458" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="原始密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acb-Jr-IWh">
+                                <rect key="frame" x="33" y="104" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="新的密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnN-xL-9Rr">
+                                <rect key="frame" x="33" y="156" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="LoginTextFieldBG" translatesAutoresizingMaskIntoConstraints="NO" id="MkU-tK-9CT">
+                                <rect key="frame" x="16" y="197" width="568" height="44"/>
+                                <rect key="contentStretch" x="0.29999999999999999" y="0.29999999999999999" width="0.0" height="0.0"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请确认新的密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qd7-vz-9lB">
+                                <rect key="frame" x="119" y="204" width="458" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="确认密码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1p-aT-Ux0">
+                                <rect key="frame" x="33" y="208" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3O-dX-TPY">
+                                <rect key="frame" x="16" y="289" width="568" height="44"/>
+                                <state key="normal" title="确认" backgroundImage="LoginButton">
+                                    <color key="titleColor" red="0.90297093880000001" green="0.97997658050000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="bON-nY-0gr" secondAttribute="trailing" constant="7" id="6lD-5L-pd5"/>
+                            <constraint firstItem="7Tx-RZ-uuk" firstAttribute="leading" secondItem="MeM-OR-7u1" secondAttribute="leadingMargin" id="84R-jx-urh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qd7-vz-9lB" secondAttribute="trailing" constant="7" id="Cnf-7V-noS"/>
+                            <constraint firstItem="bnc-Aa-dKi" firstAttribute="trailing" secondItem="MeM-OR-7u1" secondAttribute="trailingMargin" id="LyG-ip-cim"/>
+                            <constraint firstItem="7Tx-RZ-uuk" firstAttribute="trailing" secondItem="MeM-OR-7u1" secondAttribute="trailingMargin" id="MRh-E6-jqX"/>
+                            <constraint firstItem="MkU-tK-9CT" firstAttribute="trailing" secondItem="MeM-OR-7u1" secondAttribute="trailingMargin" id="bje-kC-HKw"/>
+                            <constraint firstItem="c3O-dX-TPY" firstAttribute="trailing" secondItem="MeM-OR-7u1" secondAttribute="trailingMargin" id="maA-5P-gn4"/>
+                            <constraint firstItem="bnc-Aa-dKi" firstAttribute="leading" secondItem="MeM-OR-7u1" secondAttribute="leadingMargin" id="t7c-3M-IKJ"/>
+                            <constraint firstItem="MkU-tK-9CT" firstAttribute="leading" secondItem="MeM-OR-7u1" secondAttribute="leadingMargin" id="y6o-19-vrE"/>
+                            <constraint firstItem="c3O-dX-TPY" firstAttribute="leading" secondItem="MeM-OR-7u1" secondAttribute="leadingMargin" id="z85-7M-bSv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hN1-xG-ObI" secondAttribute="trailing" constant="7" id="zAV-hG-Krx"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="修改密码" id="c2f-xd-T4A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87w-MH-6Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7969" y="2893"/>
+            <point key="canvasLocation" x="7933" y="3329"/>
         </scene>
         <!--帮助-->
         <scene sceneID="778-wo-IFx">
@@ -2578,7 +2694,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kca-Ug-duU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6000" y="2881"/>
+            <point key="canvasLocation" x="6012" y="2881"/>
         </scene>
         <!--警报记录-->
         <scene sceneID="ySf-4V-gAz">
