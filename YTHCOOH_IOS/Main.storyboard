@@ -2410,6 +2410,9 @@
                                     <color key="titleColor" red="0.90297093880000001" green="0.97997658050000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changePwdWithNewPwd:" destination="Fcq-Oj-7Fx" eventType="touchUpInside" id="dSw-N3-zp4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2428,6 +2431,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="修改密码" id="c2f-xd-T4A"/>
+                    <connections>
+                        <outlet property="freshPwd" destination="hN1-xG-ObI" id="UsH-ao-8MY"/>
+                        <outlet property="originalPwd" destination="bON-nY-0gr" id="APK-lZ-Z8l"/>
+                        <outlet property="surePwd" destination="qd7-vz-9lB" id="lzT-db-Wji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87w-MH-6Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

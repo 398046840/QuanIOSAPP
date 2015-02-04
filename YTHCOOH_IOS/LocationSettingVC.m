@@ -30,7 +30,9 @@
     }else{
         [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleNone];
         [MMProgressHUD showWithTitle:@"更改中..."];
-        [[self appDelegete].handler.connectingServer changeLocationWithDeviceMac:kCURRENTDEVICEMAC andNewLocation:freshLocation andViewController:self];
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        NSString *deviceMac = [userDefaults objectForKey:kCURRENTDEVICEMAC];
+        [[self appDelegete].handler.connectingServer changeLocationWithDeviceMac:deviceMac andNewLocation:freshLocation andViewController:self];
         
     }
     

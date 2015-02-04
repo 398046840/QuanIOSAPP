@@ -10,4 +10,12 @@
 
 @interface PwdSettingVC : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextField *originalPwd;
+
+@property (strong, nonatomic) IBOutlet UITextField *freshPwd;
+
+@property (strong, nonatomic) IBOutlet UITextField *surePwd;
+
+- (IBAction)changePwdWithNewPwd:(id)sender;
+
 @end

@@ -7,7 +7,29 @@
 //
 
 #import "PwdSettingVC.h"
+#import "AppDelegate.h"
 
 @implementation PwdSettingVC
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    
+}
+
+- (IBAction)changePwdWithNewPwd:(id)sender {
+    NSString *originalPwd = [self originalPwd].text;
+    NSString *freshPwd = [self freshPwd].text;
+    NSString *surePwd = [self surePwd].text;
+    
+    
+    NSString *userID = [self appDelegate].handler.currentUserID;
+    
+    
+}
+
+- (AppDelegate *)appDelegate{
+    return [[UIApplication sharedApplication] delegate];
+}
 
 @end
