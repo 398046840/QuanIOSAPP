@@ -22,14 +22,30 @@
     NSString *freshPwd = [self freshPwd].text;
     NSString *surePwd = [self surePwd].text;
     
-    
-    NSString *userID = [self appDelegate].handler.currentUserID;
+    if (![[self appDelegate] allInfomationPreparedWithOriginalPwd:originalPwd andNewPwd:freshPwd andSurePwd:surePwd]) {
+        
+        return;
+    }else{
+        NSString *userID = [self appDelegate].handler.currentUserID;
+        [MMProgressHUD setPresentationStyle:(MMProgressHUDPresentationStyleNone)];
+        [MMProgressHUD showWithTitle:@"更改中..."];
+        [[self appDelegate].handler.connectingServer changePwdWithUserID:userID andNewPwd:freshPwd andViewController:self];
+        
+    }
     
     
 }
 
 - (AppDelegate *)appDelegate{
     return [[UIApplication sharedApplication] delegate];
+}
+
+- (void)changeSuccess{
+    [MMProgressHUD dismissWithSuccess:@"更改成功"];
+}
+
+- (void)changeFail{
+    [MMProgressHUD dismissWithError:@"更改失败"];
 }
 
 @end

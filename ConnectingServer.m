@@ -19,6 +19,7 @@
 #import "StudyRemoteTypeAirCondition.h"
 #import "AirConditionRemoteVC.h"
 #import "LocationSettingVC.h"
+#import "PwdSettingVC.h"
 
 @implementation ConnectingServer
 
@@ -168,6 +169,29 @@
     }];
     
     [engine enqueueOperation:operation];
+    
+}
+
+- (void)changePwdWithUserID:(NSString *)userID andNewPwd:(NSString *)newPwd andViewController:(PwdSettingVC *)viewController
+{
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"/quan/androidchangpwd.jsp"];
+    
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setValue:userID forKey:@"param1"];
+    [param setValue:newPwd forKey:@"param2"];
+    
+    MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:@"115.29.45.115" customHeaderFields:nil];
+    MKNetworkOperation *op = [engine operationWithPath:urlStr params:param httpMethod:@"POST"];
+    [op addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        if ([completedOperation.responseString rangeOfString:@"fail"].location == NSNotFound) {
+            [viewController changeSuccess];
+        }else{
+            [viewController changeFail];
+        }
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        [viewController changeFail];
+    }];
+    [engine enqueueOperation:op];
     
 }
 

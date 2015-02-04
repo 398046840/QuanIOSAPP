@@ -78,6 +78,26 @@
     }
 }
 
+- (BOOL)allInfomationPreparedWithOriginalPwd:(NSString *)originalPwd andNewPwd:(NSString *)newPwd andSurePwd:(NSString *)surePwd
+{
+    if (originalPwd.length == 0 || newPwd.length == 0 || surePwd.length == 0) {
+        [self.window makeToast:@"不能有空" duration:1.5 position:CSToastPositionCenter];
+        return NO;
+    }
+    if(![self checkPwdLength:newPwd]){
+        
+        return NO;
+    }
+    if (![self isEqualNewPwd:newPwd andSurePwd:surePwd]) {
+        return NO;
+    }
+    if (![self isEqualToOriginalPwd:originalPwd]) {
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (BOOL)allInfomationPreparedWithUserID:(NSString *)userID andUserPassword:(NSString *)userPassword
 {
     
@@ -87,14 +107,41 @@
         
     }
     
-    if (userPassword.length < 6 || userPassword.length > 16) {
+    if(![self checkPwdLength:userPassword]){
         
-        [self.window  makeToast:@"密码为6-16位数字或字母" duration:1.5 position:CSToastPositionTop];
         return NO;
     }
     
     return YES;
     
+}
+
+- (BOOL)isEqualNewPwd:(NSString *)newPwd andSurePwd:(NSString *)surePwd{
+    if(![newPwd isEqualToString:surePwd]){
+        [self.window  makeToast:@"密码不一致" duration:1.5 position:CSToastPositionCenter];
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)isEqualToOriginalPwd:(NSString *)originalPwd{
+    //取得本地保存的用户密码
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *pwd = [userDefaults objectForKey:@""];
+    if(![pwd isEqualToString:originalPwd]){
+        [self.window  makeToast:@"原始密码不正确" duration:1.5 position:CSToastPositionCenter];
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)checkPwdLength:(NSString *)str{
+    if (str.length < 6 || str.length > 16) {
+        
+        [self.window  makeToast:@"密码为6-16位数字或字母" duration:1.5 position:CSToastPositionCenter];
+        return NO;
+    }
+    return YES;
 }
 
 - (BOOL)checkTel:(NSString *)str

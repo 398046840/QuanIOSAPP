@@ -42,6 +42,7 @@
 - (BOOL)checkTel:(NSString *)str;
 
 - (void)showAlertView:(NSString *)message;
+- (BOOL)allInfomationPreparedWithOriginalPwd:(NSString *)originalPwd andNewPwd:(NSString *)newPwd andSurePwd:(NSString *)surePwd;
 - (BOOL)allInfomationPreparedWithUserID:(NSString *)userID andUserPassword:(NSString *)userPassword;
 - (void)logOut;
 

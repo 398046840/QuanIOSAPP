@@ -18,4 +18,7 @@
 
 - (IBAction)changePwdWithNewPwd:(id)sender;
 
+- (void)changeSuccess;
+- (void)changeFail;
+
 @end
