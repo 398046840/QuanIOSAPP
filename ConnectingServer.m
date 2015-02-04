@@ -18,6 +18,7 @@
 #import "TVRemoteVC.h"
 #import "StudyRemoteTypeAirCondition.h"
 #import "AirConditionRemoteVC.h"
+#import "LocationSettingVC.h"
 
 @implementation ConnectingServer
 
@@ -139,6 +140,34 @@
     }];
     
     [engine enqueueOperation:op];
+    
+}
+
+- (void)changeLocationWithDeviceMac:(NSString *)deviceMac andNewLocation:(NSString *)newLocation  andViewController:(LocationSettingVC *)viewController
+{
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"/quan/androidchangge_equipment_location.jsp"];
+    
+    NSMutableDictionary *param = [[NSMutableDictionary alloc] init];
+    [param setValue:deviceMac forKey:@"param1"];
+    [param setValue:newLocation forKey:@"param2"];
+    
+    MKNetworkEngine *engine = [[MKNetworkEngine alloc] initWithHostName:@"115.29.45.115" customHeaderFields:nil];
+    MKNetworkOperation *operation = [engine operationWithPath:urlStr params:param httpMethod:@"POST"];
+    [operation addCompletionHandler:^(MKNetworkOperation *completedOperation) {
+        
+        NSLog(@"%@", completedOperation.responseString);
+        
+        if ([completedOperation.responseString rangeOfString:@"fail"].location == NSNotFound) {
+            [viewController changeSuccess];
+        }else{
+            [viewController changeFail];
+        }
+        
+    } errorHandler:^(MKNetworkOperation *completedOperation, NSError *error) {
+        [viewController changeFail];
+    }];
+    
+    [engine enqueueOperation:operation];
     
 }
 

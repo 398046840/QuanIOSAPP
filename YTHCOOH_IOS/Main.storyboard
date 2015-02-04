@@ -2275,7 +2275,7 @@
         <!--修改设备位置-->
         <scene sceneID="kbz-O1-KgP">
             <objects>
-                <viewController id="TGv-lE-A2H" sceneMemberID="viewController">
+                <viewController id="TGv-lE-A2H" customClass="LocationSettingVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uQt-W9-d0J"/>
                         <viewControllerLayoutGuide type="bottom" id="XHY-KR-zcd"/>
@@ -2320,6 +2320,9 @@
                                     <color key="titleColor" red="0.90297093880000001" green="0.97997658050000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="changeLocationWithDeviceMacAndNewLocation:" destination="TGv-lE-A2H" eventType="touchUpInside" id="69e-wL-dZS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2335,6 +2338,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="修改设备位置" id="4AU-5k-Vuy"/>
+                    <connections>
+                        <outlet property="freshLocation" destination="jbQ-aV-LXR" id="odl-nZ-2GG"/>
+                        <outlet property="originalLocation" destination="gRa-YZ-0Z5" id="9EI-NK-U4d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OL3-i0-IrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2343,7 +2350,7 @@
         <!--修改密码-->
         <scene sceneID="1hC-MT-VkI">
             <objects>
-                <viewController id="Fcq-Oj-7Fx" sceneMemberID="viewController">
+                <viewController id="Fcq-Oj-7Fx" customClass="PwdSettingVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z8V-sB-oV7"/>
                         <viewControllerLayoutGuide type="bottom" id="c53-iT-EJr"/>

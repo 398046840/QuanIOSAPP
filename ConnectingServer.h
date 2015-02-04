@@ -17,6 +17,8 @@
 - (void)retrievePasswordWithUserID:(NSString *)userID andDeviceMAC:(NSString *)deviceMAC andViewController:(UIViewController *)viewController;
 //修改密码
 - (void)resetPasswordWithUserID:(NSString *)userID andNewPassword:(NSString *)newPassword andViewController:(UIViewController *)viewController;
+//修改当前设备位置
+- (void)changeLocationWithDeviceMac:(NSString *)deviceMac andNewLocation:(NSString *)newLocation  andViewController:(UIViewController *)viewController;
 //获得当前账号所有设备
 - (void)loadingAllMyDeviceWithCurrentUserIDAndViewController:(UIViewController *)viewController;
 //获得当前选择设备的最近记录
